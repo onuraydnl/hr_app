@@ -1,0 +1,108 @@
+1->	Departman Manager(Admin)
+2->	Team Leader
+3->	????????????????
+4->	Human-Resources
+
+
+Yönetici(Departman Manager)(Admin)
+
+
+ - İşe alım süreçlerini başlatma ve yönetme yeteneği.
+ - İnsan Kaynakları departmanı ile kolayca iletişim kurabilme.
+ - Yeni pozisyonlar için gereksinimleri belirleme ve bunları açıklama.
+ - Onay verme süreçlerini başlatma ve sonlandırma.
+ - CV'leri inceleme ve onaylama yetkisi.
+ - Takım liderlerine, ekipteki eksiklikleri bildirebilme ve bunları 
+  insan kaynaklarına iletebilme.
+
+---------------------------------------------------------------------------------
+İnsan Kaynakları (HR) Rolü:
+
+ ++ - Yeni işe alım süreçlerini yürütme yeteneği.
+ ++ - İş ilanlarını oluşturma ve ilgili platformlarda paylaşma.
+ ++ - CV'leri inceleme, değerlendirme ve uygun adayları yöneticilere önerme.
+    - Gelen yorumları yönetme ve aday değerlendirme süreçlerini takip etme.
+    - Yöneticiler ve takım liderleri ile rahatça iletişim kurabilme.
+
+
+---------------------------------------------------------------------------------
+Takım Lideri (Team Leader) Rolü:
+
+    - Ekip üyelerinin performansını izleyip değerlendirme yetkisi.
+    - Ekip içindeki eksiklikleri ve ihtiyaçları tespit edebilme.
+    - İşe alım süreçlerine katılma ve adaylarla mülakat yapabilme.
+    - İşe alım sürecinde adayların uygunluğunu değerlendirebilme.
+    - İnsan kaynaklarına eksiklikleri bildirebilme.
+
+-----------------------------------------------------------------------------------
+Çalışan (Employee) Rolü:
+    - CV'lerini sisteme yükleme ve güncelleme.
+    - İş ilanlarına başvuru yapabilme.
+    - Kendi performansını gözlemleyip geliştirme adımları atabilme.
+    - İşe alım süreçlerine katılma ve yeni adaylarla tanışabilme (bu rol,
+    - iç transferleri desteklemek için de kullanılabilir).
+
+ ------------------------------------------------------------------------------------------
+
+Misafir (Guest) Rolü:
+    - Uygulamayı gözlemleme ve iş ilanlarını görüntüleme yetkisi.
+    - Adaylar ve pozisyonlar hakkında bilgi alabilme.
+    - İş başvurusu yapma (kayıtlı kullanıcı olmadan basit başvuru).
+
+--------------------------------------------------------------------------------------
+Entitiesler
+
+1->Users
+	userId,firstName,lastName,job,rolesId,createdDate,departmanId
+----------------------------------------------------------------------
+/////////////////2->Employee
+/////////////////employeeId,employeeName,employeeSurname,job,CreatedDate
+-----------------------------------------------------------------------
+3->Roles
+	rolesId,roles,Description
+
+-----------------------------------------------------------------------
+//4->Comments
+	commentId,userId,Comment,CreatedDate
+	
+-----------------------------------------------------------------------
+5->Experience
+
+	appId,company,startDate,finishDate,job
+-----------------------------------------------------------------------
+6->Language
+
+	appId,LanguageName, String (Speaking,Listening,Reading)
+-----------------------------------------------------------------------
+7->Education
+
+	userId,school,degree,major,startDate,finishDate
+-----------------------------------------------------------------------
+8???->Departman
+
+	departmanId,departmanName,job
+-----------------------------------------------------------------------
+9->Announcements	&&	Request
+
+	requestId,departmanId,description,createdDate
+
+------------------------------------------------------------------------
+10->jobAds
+
+	adId,departmanId,title,description,createdDate
+
+-------------------------------------------------------------------------
+
+11->Ahmet veya Burak abiye Sorulacak (Job)
+
+
+---------------------------------------------------------------------------
+
+12->Applications
+
+	appId,firstName,lastName,eMail,phone,coverLetter,createdDate
+
+
+
+
+
